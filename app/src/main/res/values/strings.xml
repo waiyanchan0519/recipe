@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">美味食譜</string>
+    <string name="nav_discover">食譜探索</string>
+    <string name="nav_favorites">我的收藏</string>
+    <string name="nav_shopping">備料清單</string>
+    <string name="search_placeholder">搜尋食譜、食材或菜名...</string>
+    <string name="prep_time">備料 %1$d 分</string>
+    <string name="cook_time">烹飪 %1$d 分</string>
+    <string name="servings">%1$d 人份</string>
+    <string name="calories">%1$d 大卡</string>
+</resources>
