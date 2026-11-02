@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美味食譜 RecipeApp - 官方專案文件與展示中心</title>
+  <meta name="description" content="使用 Kotlin 與 Jetpack Compose Material 3 打造的現代原生 Android 食譜應用程式官方技術文件與功能展示。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <span class="brand-icon">🍳</span>
+        <div class="brand-text">
+          <span class="brand-name">美味食譜</span>
+          <span class="brand-badge">RecipeApp v1.0</span>
+        </div>
+      </div>
+
+      <nav class="header-nav">
+        <a href="#overview">總覽</a>
+        <a href="#features">核心功能</a>
+        <a href="#simulator">介面模擬器</a>
+        <a href="#architecture">架構設計</a>
+        <a href="#datamodels">資料模型</a>
+        <a href="#quickstart">快速上手</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" title="切換深色/淺色模式" aria-label="切換主題">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="https://github.com/waiyanchan0519/recipe" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+          <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <button id="mobileNavToggle" class="mobile-toggle" aria-label="選單">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          <span>原生 Android • Kotlin • Jetpack Compose</span>
+        </div>
+        <h1 class="hero-title">
+          讓烹飪更簡單、更優雅的<br>
+          <span class="gradient-text">現代美食指南 App</span>
+        </h1>
+        <p class="hero-desc">
+          「美味食譜」是一款採用最新 Android 現代架構打造的原生美食體驗 App。具備<strong>即時份量智慧換算</strong>、<strong>互動步驟檢核</strong>、<strong>內建烹調計時器</strong>與<strong>智慧備料清單</strong>，為料理愛好者提供行雲流水般的下廚體驗。
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">Kotlin 1.9.24</span>
+          <span class="badge">Compose M3</span>
+          <span class="badge">Min SDK 24</span>
+          <span class="badge">Target SDK 34</span>
+          <span class="badge">Gradle 8.13</span>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#quickstart" class="btn btn-primary">
+            <span>開始使用 / 建立專案</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#simulator" class="btn btn-secondary">
+            <span>體驗介面模擬器</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Phone Frame -->
+      <div class="hero-phone-preview">
+        <div class="mockup-frame">
+          <div class="phone-speaker"></div>
+          <div class="phone-screen-card">
+            <div class="app-screen-header">
+              <span class="screen-title">🍳 美味食譜</span>
+              <span class="screen-timer-btn">⏱️</span>
+            </div>
+            <div class="hero-card-sample">
+              <div class="sample-tag">🔥 今日主廚推薦</div>
+              <div class="sample-food-name">台式阿嬤古早味滷肉飯</div>
+              <div class="sample-sub">油亮黏唇、醬香濃郁的白飯殺手</div>
+              <div class="sample-meta">⏱️ 65 分鐘 • 家常進階 • ★ 4.9</div>
+              <div class="sample-emoji">🍲</div>
+            </div>
+            <div class="sample-chips-row">
+              <span class="chip active">🍽️ 全部</span>
+              <span class="chip">🥢 經典中菜</span>
+              <span class="chip">🍝 異國料理</span>
+              <span class="chip">🍱 日韓</span>
+            </div>
+            <div class="sample-item-card">
+              <div class="item-pic">🍝</div>
+              <div class="item-details">
+                <div class="item-name">蒜香白酒蛤蜊麵</div>
+                <div class="item-stats">⏱️ 30 分鐘 • ★ 4.9 (412)</div>
+                <div class="item-tags"><span class="mini-tag">#海鮮控</span><span class="mini-tag">#西餐</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container docs-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="docs-sidebar">
+      <div class="sidebar-sticky">
+        <div class="sidebar-header">目錄導航</div>
+        <ul class="sidebar-links">
+          <li><a href="#overview" class="active">1. 專案總覽 (Overview)</a></li>
+          <li><a href="#features">2. 核心特色 (Key Features)</a></li>
+          <li><a href="#simulator">3. 介面互動模擬器 (Live UI)</a></li>
+          <li><a href="#architecture">4. 應用程式架構 (Architecture)</a></li>
+          <li><a href="#datamodels">5. 核心資料模型 (Data Models)</a></li>
+          <li><a href="#state">6. 狀態管理 (ViewModel & State)</a></li>
+          <li><a href="#theme">7. 設計系統與主題 (M3 Theme)</a></li>
+          <li><a href="#quickstart">8. 快速開始與編譯 (Getting Started)</a></li>
+          <li><a href="#faq">9. 常見問題 (FAQ)</a></li>
+        </ul>
+
+        <div class="sidebar-card">
+          <h4>🌟 開源倉庫</h4>
+          <p>歡迎提交 Issue 或 Pull Request 加入新食譜！</p>
+          <a href="https://github.com/waiyanchan0519/recipe" target="_blank" class="btn btn-sm btn-outline">瀏覽 GitHub Repo</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Docs Main Body -->
+    <article class="docs-body">
+      <!-- Section 1: Overview -->
+      <section id="overview" class="doc-section">
+        <h2 class="section-title">1. 專案總覽 (Overview)</h2>
+        <p>
+          <strong>美味食譜 (RecipeApp)</strong> 是一個為現代 Android 平台量身打造的原生開源 App。它擺脫了傳統雜亂網頁食譜的廣告與冗贅故事，專注於料理者在廚房備料與烹煮時的實際需求。
+        </p>
+
+        <div class="overview-cards-grid">
+          <div class="info-card">
+            <div class="card-icon">🚀</div>
+            <h3>現代純 Kotlin 技術棧</h3>
+            <p>100% 使用 Kotlin 撰寫，宣告式 UI 框架 Jetpack Compose，無任何傳統 XML 佈局包袱。</p>
+          </div>
+          <div class="info-card">
+            <div class="card-icon">📐</div>
+            <h3>Material 3 暖色食慾美學</h3>
+            <p>量身調配陶土橘（Terracotta）與琥珀黃的主題調色板，完美支援深色模式（Dark Mode）。</p>
+          </div>
+          <div class="info-card">
+            <div class="card-icon">⚡</div>
+            <h3>零外部重度相依</h3>
+            <p>採用輕量穩健的單向資料流（UDF）與 StateFlow，啟動速度飛快，不佔用多餘手機記憶體。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Features -->
+      <section id="features" class="doc-section">
+        <h2 class="section-title">2. 核心特色 (Key Features)</h2>
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-badge">01</div>
+            <div class="feature-text">
+              <h3>多元菜系探索與即時關鍵字搜尋</h3>
+              <p>內建台式經典滷肉飯、日式滑蛋嫩牛丼、義式蒜香白酒蛤蜊麵、正宗泰式打拋豬、法式生巧布朗尼、彩虹酪梨煎蝦沙拉等。支援以<strong>菜名、食材（如：蛤蜊、五花肉）或料理標籤</strong>即時篩選。</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-badge">02</div>
+            <div class="feature-text">
+              <h3>智慧份量動態換算 (Dynamic Servings Adjuster)</h3>
+              <p>不管是 1 人獨享還是 6 人家庭聚餐，在食譜頁自由調整份量（1~20 人份），所有食材的<strong>公克數、匙數、顆數</strong>均會透過內建演算法精確倍率縮放與四捨五入格式化。</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-badge">03</div>
+            <div class="feature-text">
+              <h3>料理步驟引導與整合烹調計時器 (Cooking Timer)</h3>
+              <p>每個步驟清楚標註火候要點與主廚秘訣。需要精準掌握時間的步驟（如燉煮 45 分鐘、煸香 3 分鐘），可<strong>一鍵啟動環狀倒數計時器</strong>，支援背景倒數、暫停/繼續、追加時間與完成提示。</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-badge">04</div>
+            <div class="feature-text">
+              <h3>一鍵匯入超市備料清單 (Smart Shopping List)</h3>
+              <p>確認完用餐人數後，點擊「加入備料清單」即可自動將換算後的食材整批匯入購物車。採買時逐項勾選打勾，並支援「一鍵清除已購」功能。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Interactive UI Simulator -->
+      <section id="simulator" class="doc-section">
+        <h2 class="section-title">3. 介面互動模擬器 (Live UI Simulator)</h2>
+        <p>點擊下方頁籤切換檢視 App 各畫面的視覺呈現與互動邏輯：</p>
+
+        <div class="interactive-simulator-wrapper">
+          <div class="sim-tab-controls">
+            <button class="sim-tab active" data-screen="discover">🔍 首頁探索</button>
+            <button class="sim-tab" data-screen="detail">📖 食譜詳情 & 份量換算</button>
+            <button class="sim-tab" data-screen="timer">⏱️ 烹飪計時器</button>
+            <button class="sim-tab" data-screen="shopping">🛒 超市備料清單</button>
+            <button class="sim-tab" data-screen="favorites">❤️ 我的收藏</button>
+          </div>
+
+          <div class="sim-display-area">
+            <!-- Screen 1: Discover -->
+            <div class="sim-screen active" id="screen-discover">
+              <div class="sim-phone">
+                <div class="sim-notch"></div>
+                <div class="sim-app-bar">
+                  <span>🍳 美味食譜</span>
+                  <span class="sim-badge-btn" onclick="switchSimTab('timer')">⏱️ 計時器</span>
+                </div>
+                <div class="sim-content">
+                  <div class="sim-search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="搜尋食譜、食材（如：蛤蜊）..." readonly value="滷肉飯">
+                  </div>
+                  <div class="sim-categories">
+                    <span class="sim-cat-chip active">🍽️ 全部</span>
+                    <span class="sim-cat-chip">🥢 經典中菜</span>
+                    <span class="sim-cat-chip">🍝 異國料理</span>
+                    <span class="sim-cat-chip">🧁 甜點烘焙</span>
+                  </div>
+                  <div class="sim-card-featured" onclick="switchSimTab('detail')">
+                    <div class="feat-badge">今日主廚推薦 ★ 4.9</div>
+                    <div class="feat-title">台式阿嬤古早味滷肉飯</div>
+                    <div class="feat-desc">油亮黏唇、醬香濃郁的白飯殺手</div>
+                    <div class="feat-meta">⏱️ 65 分鐘 • 家常進階 • 620 大卡</div>
+                    <div class="feat-emoji">🍲</div>
+                  </div>
+                  <div class="sim-card-mini" onclick="switchSimTab('detail')">
+                    <div class="mini-icon">🍝</div>
+                    <div class="mini-info">
+                      <h4>蒜香白酒蛤蜊義大利麵</h4>
+                      <p>鮮甜海味爆棚！經典義大利餐廳名菜</p>
+                      <span class="mini-stat">⏱️ 30 分鐘 • ★ 4.9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sim-caption">
+                <h4>首頁探索畫面 (HomeScreen)</h4>
+                <p>支援橫向滑動的分類晶片列、今日主廚推薦焦點卡、即時搜尋篩選列與精緻流線卡片。</p>
+              </div>
+            </div>
+
+            <!-- Screen 2: Recipe Detail -->
+            <div class="sim-screen" id="screen-detail">
+              <div class="sim-phone">
+                <div class="sim-notch"></div>
+                <div class="sim-app-bar">
+                  <button class="back-link" onclick="switchSimTab('discover')">← 返回</button>
+                  <span>食譜詳情</span>
+                  <span class="fav-icon">❤️</span>
+                </div>
+                <div class="sim-content">
+                  <div class="detail-hero">
+                    <div class="hero-emoji-large">🍲</div>
+                  </div>
+                  <div class="detail-body">
+                    <h3 class="detail-title">台式阿嬤古早味滷肉飯</h3>
+                    <p class="detail-sub">油亮黏唇、醬香濃郁的白飯殺手</p>
+
+                    <div class="servings-calculator-box">
+                      <div class="calc-label">
+                        <strong>食材清單</strong>
+                        <small>點擊劃掉已備好的食材</small>
+                      </div>
+                      <div class="servings-controls">
+                        <button class="calc-btn" id="simMinusBtn">-</button>
+                        <span class="servings-display"><strong id="simServingsNum">4</strong> 人份</span>
+                        <button class="calc-btn" id="simPlusBtn">+</button>
+                      </div>
+                    </div>
+
+                    <div class="ingredient-items-list" id="simIngredientsList">
+                      <label class="ing-item"><input type="checkbox"> <span>帶皮五花肉</span> <strong class="ing-amt" data-base="150">600 克</strong></label>
+                      <label class="ing-item"><input type="checkbox"> <span>紅蔥頭酥</span> <strong class="ing-amt" data-base="20">80 克</strong></label>
+                      <label class="ing-item"><input type="checkbox"> <span>純釀造醬油</span> <strong class="ing-amt" data-base="25">100 毫升</strong></label>
+                      <label class="ing-item"><input type="checkbox"> <span>水煮蛋</span> <strong class="ing-amt" data-base="1">4 顆</strong></label>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" style="margin-top: 12px;" onclick="switchSimTab('shopping')">
+                      🛒 將食材加入備料清單
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="sim-caption">
+                <h4>食譜詳情與動態換算 (RecipeDetailScreen)</h4>
+                <p>試著點擊上方 <strong>[-] 或 [+]</strong> 按鈕，食材用量會即時進行演算法精準乘載換算！亦可直接勾選食材做備料確認。</p>
+              </div>
+            </div>
+
+            <!-- Screen 3: Cooking Timer -->
+            <div class="sim-screen" id="screen-timer">
+              <div class="sim-phone">
+                <div class="sim-notch"></div>
+                <div class="sim-app-bar">
+                  <span>⏱️ 烹飪計時器</span>
+                  <span class="close-btn" onclick="switchSimTab('discover')">✕</span>
+                </div>
+                <div class="sim-content flex-center">
+                  <div class="timer-card-modal">
+                    <div class="timer-step-label">台式古早味滷肉飯 - 步驟 4</div>
+                    <div class="timer-step-title">慢火煨燉與浸泡滷蛋</div>
+
+                    <div class="circular-timer-box">
+                      <div class="circle-outer">
+                        <div class="circle-inner">
+                          <div class="timer-digits" id="simTimerDigits">44:52</div>
+                          <div class="timer-status">計時進行中...</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="timer-btn-row">
+                      <button class="timer-action-btn" title="重設" id="simResetTimer">🔄</button>
+                      <button class="timer-action-btn primary" title="暫停/開始" id="simPlayPauseTimer">⏸️</button>
+                      <button class="timer-action-btn" title="加1分鐘" id="simAddMinute">+1m</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sim-caption">
+                <h4>整合計時器彈窗 (CookingTimerDialog)</h4>
+                <p>針對需要計時的料理步驟（如煸香、煨煮、烘烤），在步驟卡片點擊即可一鍵喚醒全域計時浮窗，可縮小繼續檢視其他步驟。</p>
+              </div>
+            </div>
+
+            <!-- Screen 4: Shopping List -->
+            <div class="sim-screen" id="screen-shopping">
+              <div class="sim-phone">
+                <div class="sim-notch"></div>
+                <div class="sim-app-bar">
+                  <span>🛒 備料清單 (3 待購)</span>
+                  <span class="action-link">清除已購</span>
+                </div>
+                <div class="sim-content">
+                  <div class="shop-item">
+                    <input type="checkbox">
+                    <div class="shop-desc">
+                      <div class="shop-name">帶皮五花肉</div>
+                      <div class="shop-src">來自: 台式阿嬤古早味滷肉飯</div>
+                    </div>
+                    <span class="shop-qty">600 克</span>
+                  </div>
+                  <div class="shop-item">
+                    <input type="checkbox">
+                    <div class="shop-desc">
+                      <div class="shop-name">純釀造醬油</div>
+                      <div class="shop-src">來自: 台式阿嬤古早味滷肉飯</div>
+                    </div>
+                    <span class="shop-qty">100 毫升</span>
+                  </div>
+                  <div class="shop-item checked">
+                    <input type="checkbox" checked>
+                    <div class="shop-desc">
+                      <div class="shop-name strikethrough">紅蔥頭酥</div>
+                      <div class="shop-src">來自: 台式阿嬤古早味滷肉飯</div>
+                    </div>
+                    <span class="shop-qty">80 克</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sim-caption">
+                <h4>超市備料清單 (ShoppingListScreen)</h4>
+                <p>整合多道食譜的採買清單，到超市只要帶著手機逐一勾選，不怕漏買任何一樣調味料或食材。</p>
+              </div>
+            </div>
+
+            <!-- Screen 5: Favorites -->
+            <div class="sim-screen" id="screen-favorites">
+              <div class="sim-phone">
+                <div class="sim-notch"></div>
+                <div class="sim-app-bar">
+                  <span>❤️ 我的收藏 (2)</span>
+                </div>
+                <div class="sim-content">
+                  <div class="fav-card" onclick="switchSimTab('detail')">
+                    <div class="fav-pic">🍲</div>
+                    <div class="fav-details">
+                      <h4>台式阿嬤古早味滷肉飯</h4>
+                      <p>⏱️ 65 分鐘 • 家常進階 • ★ 4.9</p>
+                    </div>
+                    <button class="fav-heart-active">❤️</button>
+                  </div>
+                  <div class="fav-card">
+                    <div class="fav-pic">🍝</div>
+                    <div class="fav-details">
+                      <h4>蒜香白酒蛤蜊義大利麵</h4>
+                      <p>⏱️ 30 分鐘 • 新手入門 • ★ 4.9</p>
+                    </div>
+                    <button class="fav-heart-active">❤️</button>
+                  </div>
+                </div>
+              </div>
+              <div class="sim-caption">
+                <h4>收藏夾 (FavoritesScreen)</h4>
+                <p>保存愛吃的拿手好菜，離線隨點隨看。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Architecture -->
+      <section id="architecture" class="doc-section">
+        <h2 class="section-title">4. 應用程式架構 (Architecture)</h2>
+        <p>
+          專案嚴格遵循 Google 官方推薦的 <strong>現代 Android 應用程式架構指南 (Modern Android Architecture)</strong>，採用 MVVM 分層解耦設計與單向資料流（UDF, Unidirectional Data Flow）：
+        </p>
+
+        <div class="architecture-diagram">
+          <div class="arch-box ui-layer">
+            <span class="layer-badge">UI Layer (View)</span>
+            <h4>Jetpack Compose (M3)</h4>
+            <p>HomeScreen • RecipeDetailScreen • ShoppingListScreen • FavoritesScreen</p>
+          </div>
+          <div class="arch-arrow">
+            <span>使用者事件 (Events / Intent)</span>
+            <div class="arrow-down">⬇️</div>
+            <span>StateFlow 狀態訂閱 (UI State)</span>
+          </div>
+          <div class="arch-box vm-layer">
+            <span class="layer-badge">State Management</span>
+            <h4>RecipeViewModel (AndroidX ViewModel)</h4>
+            <p>搜尋篩選 • 動態份量換算 • 計時器 Coroutine Job • 收藏清單</p>
+          </div>
+          <div class="arch-arrow">
+            <div class="arrow-down">⬇️</div>
+          </div>
+          <div class="arch-box data-layer">
+            <span class="layer-badge">Data Layer</span>
+            <h4>SampleData & Domain Models</h4>
+            <p>Recipe, Ingredient, CookingStep, Category, Difficulty, ShoppingItem</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 24px;">檔案目錄組織結構 (Directory Tree)</h3>
+        <pre class="code-block"><code>RecipeApp/
+├── app/
+│   ├── build.gradle.kts                <span class="comment">// 依賴管理 (Compose BOM 2024.05.00, Kotlin 1.9.24)</span>
+│   ├── proguard-rules.pro             <span class="comment">// 混淆規則設定</span>
+│   └── src/main/
+│       ├── AndroidManifest.xml        <span class="comment">// 宣告入口 Activity 與震動權限 (計時器結束提醒)</span>
+│       ├── res/                       <span class="comment">// 應用程式圖示、向量圖形、色系與字串資源</span>
+│       └── java/com/example/recipeapp/
+│           ├── MainActivity.kt        <span class="comment">// 主入口 Activity，管理導航與全域彈窗</span>
+│           ├── model/
+│           │   └── Recipe.kt          <span class="comment">// 食譜、食材、難易度、分類與購物清單實體定義</span>
+│           ├── data/
+│           │   └── SampleData.kt      <span class="comment">// 精心調配的 8 道中西日韓豐富食譜資料集</span>
+│           ├── viewmodel/
+│           │   └── RecipeViewModel.kt <span class="comment">// 狀態持有者 (StateFlow)，計時協程、篩選搜尋核心</span>
+│           ├── ui/
+│           │   ├── theme/             <span class="comment">// M3 陶土橘暖色調色盤 (Color, Type, Theme)</span>
+│           │   ├── components/        <span class="comment">// TopSearchBar, CategoryChipBar, RecipeCard, TimerDialog</span>
+│           │   └── screens/           <span class="comment">// HomeScreen, RecipeDetailScreen, ShoppingList, Favorites</span>
+├── build.gradle.kts                   <span class="comment">// 頂層 Gradle 設定 (AGP 8.13.2)</span>
+├── settings.gradle.kts                <span class="comment">// 模組包含與 Foojay Toolchains 外掛</span>
+├── gradle.properties                  <span class="comment">// JVM 記憶體最佳化參數</span>
+├── gradlew / gradlew.bat              <span class="comment">// Gradle 8.13 Wrapper 跨平台建置指令</span>
+└── docs/                              <span class="comment">// 專案文件與展示網站 (此網頁)</span></code></pre>
+      </section>
+
+      <!-- Section 5: Data Models -->
+      <section id="datamodels" class="doc-section">
+        <h2 class="section-title">5. 核心資料模型 (Data Models)</h2>
+        <p>所有資料實體均以 Kotlin <code>data class</code> 與 <code>enum class</code> 嚴格規範，不可變性（Immutability）保證多執行緒安全：</p>
+
+        <div class="code-header">
+          <span>Recipe.kt (精華程式碼展示)</span>
+          <button class="copy-btn" onclick="copyCode(this)">複製代碼</button>
+        </div>
+        <pre class="code-block"><code class="language-kotlin">data class Ingredient(
+    val name: String,
+    val baseAmount: Double,
+    val unit: String,
+    val note: String = ""
+) {
+    // 智慧換算：依據份量倍率 (multiplier) 格式化輸出
+    fun getFormattedAmount(multiplier: Double): String {
+        val calculated = baseAmount * multiplier
+        return if (calculated <= 0.0) {
+            ""
+        } else if (calculated % 1.0 == 0.0) {
+            calculated.toInt().toString()
+        } else {
+            String.format("%.1f", calculated).trimEnd('0').trimEnd('.')
+        }
+    }
+}
+
+data class CookingStep(
+    val stepNumber: Int,
+    val title: String,
+    val description: String,
+    val timerMinutes: Int? = null,  // 若步驟需要計時，填入分鐘數
+    val tip: String? = null          // 大廚關鍵提點
+)
+
+data class Recipe(
+    val id: String,
+    val title: String,
+    val subtitle: String,
+    val description: String,
+    val category: Category,
+    val emoji: String,
+    val prepTimeMinutes: Int,
+    val cookTimeMinutes: Int,
+    val defaultServings: Int = 2,
+    val difficulty: Difficulty,
+    val calories: Int,
+    val rating: Double,
+    val reviewCount: Int,
+    val tags: List&lt;String&gt;,
+    val ingredients: List&lt;Ingredient&gt;,
+    val steps: List&lt;CookingStep&gt;,
+    val chefTips: List&lt;String&gt;
+)</code></pre>
+      </section>
+
+      <!-- Section 6: State Management -->
+      <section id="state" class="doc-section">
+        <h2 class="section-title">6. 狀態管理 (ViewModel & StateFlow)</h2>
+        <p>
+          在 <code>RecipeViewModel.kt</code> 中，所有的 UI 狀態透過單一資料流 <code>StateFlow&lt;RecipeUiState&gt;</code> 暴露給 Compose 視圖層，狀態切換均透過可預測的純函式 <code>_uiState.update { ... }</code>：
+        </p>
+
+        <div class="code-header">
+          <span>RecipeViewModel.kt - 計時器協程實作</span>
+          <button class="copy-btn" onclick="copyCode(this)">複製代碼</button>
+        </div>
+        <pre class="code-block"><code class="language-kotlin">private fun runTimerCountdown() {
+    timerJob = viewModelScope.launch {
+        while (true) {
+            delay(1000L) // 每秒精準遞減
+            val currentRemaining = _uiState.value.timerState.remainingSeconds
+            if (currentRemaining > 1) {
+                _uiState.update {
+                    it.copy(timerState = it.timerState.copy(remainingSeconds = currentRemaining - 1))
+                }
+            } else {
+                _uiState.update {
+                    it.copy(
+                        timerState = it.timerState.copy(
+                            remainingSeconds = 0,
+                            isRunning = false
+                        )
+                    )
+                }
+                break
+            }
+        }
+    }
+}</code></pre>
+      </section>
+
+      <!-- Section 7: Theme & Styling -->
+      <section id="theme" class="doc-section">
+        <h2 class="section-title">7. 設計系統與主題 (M3 Theme)</h2>
+        <p>色彩設計啟發自剛出爐麵包、陶鍋熱湯與香草香料的溫暖大地色：</p>
+
+        <div class="color-palette-grid">
+          <div class="color-swatch" style="background: #D84315;">
+            <span class="swatch-name">Terracotta Primary</span>
+            <span class="swatch-hex">#D84315</span>
+          </div>
+          <div class="color-swatch" style="background: #FFB300; color: #181514;">
+            <span class="swatch-name">Amber Accent</span>
+            <span class="swatch-hex">#FFB300</span>
+          </div>
+          <div class="color-swatch" style="background: #FBF8F5; color: #212121; border: 1px solid #ddd;">
+            <span class="swatch-name">Warm Cream Surface</span>
+            <span class="swatch-hex">#FBF8F5</span>
+          </div>
+          <div class="color-swatch" style="background: #181514;">
+            <span class="swatch-name">Dark Surface</span>
+            <span class="swatch-hex">#181514</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Quick Start -->
+      <section id="quickstart" class="doc-section">
+        <h2 class="section-title">8. 快速開始與編譯 (Getting Started)</h2>
+
+        <div class="steps-flow">
+          <div class="step-card">
+            <span class="step-num">Step 1</span>
+            <h4>安裝環境需求</h4>
+            <ul>
+              <li><strong>作業系統</strong>: Windows 10/11, macOS, 或 Linux</li>
+              <li><strong>開發工具</strong>: Android Studio (建議 Iguana / Jellyfish / Ladybug 或更高版本)</li>
+              <li><strong>JDK 版本</strong>: Java 17 或 Java 21 (由 Gradle Foojay 工具鏈自動偵測下載)</li>
+            </ul>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">Step 2</span>
+            <h4>複製 Git 專案</h4>
+            <div class="code-header">
+              <span>PowerShell / 終端機</span>
+              <button class="copy-btn" onclick="copyCode(this)">複製代碼</button>
+            </div>
+            <pre class="code-block"><code class="language-bash">git clone git@github.com:waiyanchan0519/recipe.git
+cd recipe</code></pre>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">Step 3</span>
+            <h4>以 Android Studio 開啟</h4>
+            <ol>
+              <li>啟動 Android Studio，在歡迎畫面點選 <strong>Open</strong>。</li>
+              <li>選擇 <code>C:\RecipeApp</code> 資料夾。</li>
+              <li>Android Studio 將自動進行 Gradle Sync。</li>
+              <li>連接手機（開啟 USB 偵錯）或啟動 Android 模擬器 (AVD)。</li>
+              <li>點選右上角綠色三角形 <strong>Run 'app' (Shift + F10)</strong> 即可執行！</li>
+            </ol>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">Step 4</span>
+            <h4>命令列建置 APK (Command Line Build)</h4>
+            <div class="code-header">
+              <span>Windows PowerShell</span>
+              <button class="copy-btn" onclick="copyCode(this)">複製代碼</button>
+            </div>
+            <pre class="code-block"><code class="language-powershell"># 編譯 Debug APK
+.\gradlew assembleDebug
+
+# 編譯輸出路徑位於：
+# app/build/outputs/apk/debug/app-debug.apk</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: FAQ -->
+      <section id="faq" class="doc-section">
+        <h2 class="section-title">9. 常見問題 (FAQ)</h2>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><strong>Q: 可以在舊款 Android 手機上執行嗎？</strong></summary>
+            <p>可以！專案的 <code>minSdk</code> 設定為 <strong>24</strong> (Android 7.0 Nougat)，涵蓋全球超過 98.8% 的活躍 Android 裝置。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary><strong>Q: 如何在 GitHub Pages 託管此文件網站？</strong></summary>
+            <p>本文件網站位於 <code>/docs</code> 資料夾中。在 GitHub 儲存庫頁面依序點選 <strong>Settings -> Pages -> Build and deployment</strong>，將 Branch 設為 <code>main</code>，資料夾選擇 <code>/docs</code>，點擊 Save 後即可於 <code>https://waiyanchan0519.github.io/recipe/</code> 免費上線！</p>
+          </details>
+
+          <details class="faq-item">
+            <summary><strong>Q: 計時器在背景會繼續倒數嗎？</strong></summary>
+            <p>計時邏輯是由掛載於 ViewModel 上的 Kotlin Coroutine Job 管理，在同一個 App 生命週期內切換分頁或詳情頁均會保持持續倒數，並於歸零時觸發震動通知提醒。</p>
+          </details>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand">
+          <span class="brand-icon">🍳</span>
+          <span class="brand-name">美味食譜 RecipeApp</span>
+        </div>
+        <p>一個以 Kotlin & Jetpack Compose 打造的現代化原生 Android 料理助理。</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/waiyanchan0519/recipe" target="_blank">GitHub Repository</a>
+        <a href="#quickstart">快速安裝</a>
+        <a href="#simulator">介面模擬器</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 美味食譜 RecipeApp. Open Source Project.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
