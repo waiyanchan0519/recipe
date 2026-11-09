@@ -492,6 +492,522 @@ object SampleData {
             ),
             primaryColorHex = 0xFFE64A19L,
             secondaryColorHex = 0xFFFF7043L
+        ),
+        Recipe(
+            id = "sichuan_mapo_tofu",
+            title = "正宗川味香辣麻婆豆腐",
+            subtitle = "麻、辣、鮮、香、燙、嫩、酥、捆，八字精髓下飯之王",
+            description = "四川名廚傳承經典配方！精選嫩板豆腐切丁先用鹽水汆燙去豆腥保滑嫩，以純牛絞肉慢火煸至酥脆香乾，融入郫縣老豆瓣醬與永川豆豉炒出紅亮紅油，起鍋前連勾三次米湯芡，撒上剛現磨的大紅袍花椒粉，熱氣撲鼻令人胃口大開。",
+            category = Category.CHINESE,
+            emoji = "🌶️",
+            prepTimeMinutes = 15,
+            cookTimeMinutes = 12,
+            defaultServings = 3,
+            difficulty = Difficulty.MEDIUM,
+            calories = 340,
+            rating = 4.9,
+            reviewCount = 428,
+            tags = listOf("經典川菜", "麻辣鮮香", "白飯殺手", "豆腐名菜"),
+            ingredients = listOf(
+                Ingredient("嫩豆腐（或板豆腐）", 400.0, "克", "切 1.5 公分方丁"),
+                Ingredient("牛肉末（或豬絞肉）", 120.0, "克", "慢火煸酥"),
+                Ingredient("正宗郫縣豆瓣醬", 2.0, "大匙", "細細剁碎"),
+                Ingredient("四川豆豉", 1.0, "大匙", "略微壓碎"),
+                Ingredient("大紅袍花椒粉", 1.5, "茶匙", "起鍋現磨撒頂"),
+                Ingredient("蒜末與薑末", 2.0, "大匙"),
+                Ingredient("青蒜苗（蒜苗圈）", 2.0, "根", "切小斜段"),
+                Ingredient("高湯或溫水", 250.0, "毫升"),
+                Ingredient("優質醬油與糖", 1.0, "大匙", "平衡鹹度"),
+                Ingredient("太白粉水（水芡）", 3.0, "大匙", "分三次勾芡")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "豆腐鹽水浸燙",
+                    description = "湯鍋加水加半茶匙鹽煮微滾，放入切塊豆腐丁浸燙 2 分鐘後撈出泡溫水備用。",
+                    timerMinutes = 2,
+                    tip = "鹽水燙豆腐能逼出豆腥味，並使豆腐緊實不易在翻炒時碎裂。"
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "煸香酥脆牛肉末",
+                    description = "熱鍋倒入適量油，下牛肉末開中小火慢炒，將牛肉水份煸乾至邊緣焦黃微酥、油脂清澈。",
+                    timerMinutes = 4,
+                    tip = "牛肉一定要煸至酥脆化渣，這就是正宗麻婆豆腐靈魂中的「酥」。"
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "炒出豆瓣紅油與醬香",
+                    description = "轉小火，加入剁碎的郫縣豆瓣醬與豆豉慢炒出深紅油亮色澤與醇厚醬香，再下薑蒜末翻炒爆香。",
+                    timerMinutes = 2
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "推入豆腐煨煮入味",
+                    description = "倒入 250 毫升溫高湯煮沸，輕輕滑入瀝乾的豆腐塊，加少許糖調味，中小火慢煨 3 分鐘讓豆腐吸飽麻辣湯汁。",
+                    timerMinutes = 3,
+                    tip = "切忌用鍋鏟亂翻切碎豆腐，應用鍋鏟背面輕輕推動。"
+                ),
+                CookingStep(
+                    stepNumber = 5,
+                    title = "三段式勾芡與撒花椒",
+                    description = "下蒜苗白段，分三次淋入水澱粉：第一次定味、第二次鎖汁、第三次亮芡；起鍋裝盤，均勻撒上剛現磨的大紅袍花椒粉與蒜苗綠圈。",
+                    timerMinutes = 2,
+                    tip = "三次勾芡能讓紅油與濃芡完美裹在每塊豆腐上，不吐水不沉澱。"
+                )
+            ),
+            chefTips = listOf(
+                "花椒粉必須起鍋出盤後現磨撒在頂層，利用熱蒸氣逼出麻香，若提早下鍋煮容易發苦。"
+            ),
+            primaryColorHex = 0xFFC62828L,
+            secondaryColorHex = 0xFFFF5722L
+        ),
+        Recipe(
+            id = "three_cup_chicken",
+            title = "台式熱炒濃郁塔香三杯雞",
+            subtitle = "一杯麻油、一杯米酒、一杯醬油，焦糖金黃肉嫩多汁",
+            description = "台灣熱炒店與家常砂鍋的第一名台柱！以濃醇黑麻油低溫慢煸老薑片至乾癟捲曲，放入仿土雞腿肉煎出金黃脆皮，注入醇米酒、純釀醬油與冰糖大火燒滾收汁至濃稠焦糖色，起鍋前投入滿滿九層塔與砂鍋蓋邊熗米酒，香氣席捲整個廚房。",
+            category = Category.CHINESE,
+            emoji = "🍗",
+            prepTimeMinutes = 15,
+            cookTimeMinutes = 18,
+            defaultServings = 4,
+            difficulty = Difficulty.MEDIUM,
+            calories = 520,
+            rating = 4.9,
+            reviewCount = 356,
+            tags = listOf("經典台味", "熱炒必吃", "砂鍋料理", "鹹香甘甜"),
+            ingredients = listOf(
+                Ingredient("仿土雞腿肉（切大塊）", 600.0, "克"),
+                Ingredient("帶皮老薑", 50.0, "克", "切薄片約 20 片"),
+                Ingredient("整粒大蒜瓣", 12.0, "瓣", "去皮保持整粒"),
+                Ingredient("新鮮九層塔", 2.0, "大把", "洗淨瀝乾"),
+                Ingredient("純黑麻油", 2.0, "大匙"),
+                Ingredient("食用油（耐高溫沙拉油）", 1.0, "大匙", "混油防麻油變苦"),
+                Ingredient("台灣米酒", 60.0, "毫升"),
+                Ingredient("純釀造醬油", 40.0, "毫升"),
+                Ingredient("醬油膏", 20.0, "毫升", "增添黏稠焦糖感"),
+                Ingredient("冰糖（或二砂）", 25.0, "克"),
+                Ingredient("紅辣椒", 1.0, "根", "斜切段添色")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "黑麻油慢火煸透薑片",
+                    description = "熱鍋倒入食用油與黑麻油，開小火將老薑薄片平鋪鍋底，慢火煸煎約 5 分鐘至邊緣微焦捲曲發出辛香味，下整粒蒜瓣炒至微金黃。",
+                    timerMinutes = 5,
+                    tip = "黑麻油不可高溫大火爆炒以免發苦，混入少許耐熱沙拉油能護住油香。"
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "雞腿肉下鍋煸煎上色",
+                    description = "轉中大火，下雞腿肉塊，先將雞皮面朝下煎出多餘雞油，翻面煎炒至雞肉表面整體泛出金黃焦邊。",
+                    timerMinutes = 4
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "三杯調味大火燒滾煨煮",
+                    description = "加入冰糖炒化上色，沿鍋邊淋入醬油、醬油膏與米酒，煮沸後轉中小火蓋上鍋蓋慢煨 8 分鐘讓雞肉充分入味熟軟。",
+                    timerMinutes = 8
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "大火收汁與砂鍋熗塔香",
+                    description = "開大火翻炒收乾湯汁至醬汁濃稠油亮均勻裹在每塊雞肉上；砂鍋預熱燒燙，倒入雞肉、投入大把九層塔葉與辣椒，蓋上鍋蓋沿蓋緣淋入一匙米酒燜 15 秒開蓋上桌！",
+                    timerMinutes = 2,
+                    tip = "鍋蓋緣淋米酒能利用高溫砂鍋瞬間蒸發激發極致鑊氣！"
+                )
+            ),
+            chefTips = listOf(
+                "雞肉推薦挑選肉質緊實的仿土雞腿，口感比肉雞更彈牙，耐煨不爛。"
+            ),
+            primaryColorHex = 0xFFBF360CL,
+            secondaryColorHex = 0xFFFF7043L
+        ),
+        Recipe(
+            id = "japanese_pork_curry",
+            title = "日式熟成厚切豬排濃咖哩",
+            subtitle = "慢炒焦糖洋蔥基底，搭配外酥內多汁金黃炸豬排",
+            description = "日本洋食店的殿堂級經典！將大量洋蔥用中小火耐心慢炒至深琥珀焦糖色，釋放驚人天然甘甜，與胡蘿蔔、馬鈴薯、富士蘋果泥慢燉出濃郁醇厚咖哩醬；蓋上一塊外皮酥脆卡滋、內裡粉嫩爆汁的現炸厚切大里肌豬排，每一口都是至高無上的幸福。",
+            category = Category.JAPANESE,
+            emoji = "🍛",
+            prepTimeMinutes = 25,
+            cookTimeMinutes = 35,
+            defaultServings = 4,
+            difficulty = Difficulty.HARD,
+            calories = 780,
+            rating = 4.9,
+            reviewCount = 612,
+            tags = listOf("經典和風", "日式洋食", "黃金炸豬排", "濃郁咖哩"),
+            ingredients = listOf(
+                Ingredient("厚切豬大里肌肉排", 4.0, "片", "每片約 150 克"),
+                Ingredient("洋蔥", 2.0, "顆", "順紋切薄絲"),
+                Ingredient("馬鈴薯", 2.0, "顆", "滾刀切大塊"),
+                Ingredient("胡蘿蔔", 1.0, "根", "滾刀切塊"),
+                Ingredient("日式咖哩塊（中辛或甜味）", 1.0, "盒", "約 180 克"),
+                Ingredient("富士蘋果", 0.5, "顆", "去皮磨成泥"),
+                Ingredient("黑巧克力（70%）", 10.0, "克", "秘方增添深度"),
+                Ingredient("日式無糖優格或牛奶", 2.0, "大匙"),
+                Ingredient("日式生麵包粉 (Panko)", 100.0, "克"),
+                Ingredient("中筋麵粉與全蛋液", 1.0, "份", "過三關炸粉用"),
+                Ingredient("高湯或清水", 800.0, "毫升")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "慢炒靈魂焦糖洋蔥 (Caramelized Onion)",
+                    description = "深湯鍋放入黃油與少許油，加入全部洋蔥絲，中微火耐心翻炒 15-20 分鐘，直到洋蔥體積縮小至 1/4、顏色轉為深琥珀金黃焦糖色。",
+                    timerMinutes = 18,
+                    tip = "焦糖化洋蔥是日式頂級咖哩醬汁甘甜醇厚的最核心靈魂！"
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "加入根莖蔬果慢燉",
+                    description = "加入胡蘿蔔塊與馬鈴薯翻炒 2 分鐘，倒入 800 毫升水或高湯，大火煮滾後撈除浮沫，加入蘋果泥，轉微火慢燉 15 分鐘至蔬菜軟透。",
+                    timerMinutes = 15
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "融化咖哩塊與熟成增味",
+                    description = "熄火，將咖哩塊掰成小塊放入鍋中攪拌至完全融化無顆粒，開微火續煮 5 分鐘，加入黑巧克力碎與優格攪勻出光澤。",
+                    timerMinutes = 5,
+                    tip = "少許純黑巧克力可中和甘味並賦予醬汁如咖啡店般的深邃苦甜回甘。"
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "雙溫炸出外酥裡嫩厚切豬排",
+                    description = "豬排斷筋拍平撒海鹽黑椒，依序裹上麵粉、蛋液、日式粗麵包粉。160°C 油溫先炸 4 分鐘定型鎖汁，撈起瀝油靜置 3 分鐘，再以 180°C 高溫搶酥炸 1 分鐘出鍋切厚條。",
+                    timerMinutes = 6,
+                    tip = "兩次油炸法：低溫炸熟肉心、高溫逼油外皮金黃酥脆！"
+                ),
+                CookingStep(
+                    stepNumber = 5,
+                    title = "盛盤組裝",
+                    description = "白飯塑形盛入深盤，淋上滾燙濃醇蔬菜咖哩，優雅擺上切塊金黃豬排，附上醃福神漬即可大快朵頤。",
+                    timerMinutes = null
+                )
+            ),
+            chefTips = listOf(
+                "咖哩放置隔夜（熟成一晚）加熱再吃，所有食材風味相互交融，美味程度更上一層樓！"
+            ),
+            primaryColorHex = 0xFFE65100L,
+            secondaryColorHex = 0xFFFFB300L
+        ),
+        Recipe(
+            id = "korean_tteokbokki",
+            title = "首爾街頭香辣起司炒年糕",
+            subtitle = "Q彈年糕裹滿甜辣紅醬，濃郁牽絲莫札瑞拉起司",
+            description = "弘大路邊布帳馬車的超人氣宵夜！小魚乾昆布高湯作為鮮味基底，融入韓國純正太陽草辣醬、粗細辣椒粉、糖稀與釜山魚板慢火煮出濃稠紅汁，年糕吸飽湯汁極致軟糯入味，最後鋪上厚厚一層莫札瑞拉起司燜至融化，甜辣拉絲讓人欲罷不能。",
+            category = Category.JAPANESE,
+            emoji = "🫕",
+            prepTimeMinutes = 10,
+            cookTimeMinutes = 12,
+            defaultServings = 2,
+            difficulty = Difficulty.EASY,
+            calories = 490,
+            rating = 4.8,
+            reviewCount = 289,
+            tags = listOf("韓式街頭", "甜辣拉絲", "下酒宵夜", "年糕控"),
+            ingredients = listOf(
+                Ingredient("韓國純米年糕條", 300.0, "克", "洗淨瀝乾"),
+                Ingredient("釜山扁魚板", 2.0, "片", "切菱形塊"),
+                Ingredient("大蔥（大蔥圈）", 1.0, "根", "斜切段"),
+                Ingredient("高麗菜葉", 2.0, "片", "切粗塊"),
+                Ingredient("熟水煮蛋", 2.0, "顆", "去殼"),
+                Ingredient("莫札瑞拉披薩起司絲", 80.0, "克", "頂部拉絲"),
+                Ingredient("韓國辣醬 (Gochujang)", 2.5, "大匙"),
+                Ingredient("韓國細辣椒粉", 1.0, "大匙"),
+                Ingredient("純釀醬油", 1.0, "大匙"),
+                Ingredient("玉米糖稀（或蜂蜜砂糖）", 2.0, "大匙"),
+                Ingredient("小魚乾昆布高湯", 400.0, "毫升"),
+                Ingredient("熟白芝麻", 1.0, "茶匙", "裝飾")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "調製韓式黃金辣炒醬底",
+                    description = "平底深炒鍋倒入 400 毫升小魚乾昆布高湯，加入韓國辣醬、細辣椒粉、醬油與玉米糖稀，用湯匙充分攪勻煮滾。",
+                    timerMinutes = 2
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "加入年糕與魚板慢煨",
+                    description = "倒入年糕條、魚板塊與高麗菜葉，轉中小火慢煨 6-8 分鐘，期間頻繁輕輕翻動底部防黏鍋，直到醬汁漸漸濃稠、年糕變得軟糯彈牙。",
+                    timerMinutes = 7,
+                    tip = "用小火慢煨能讓高湯鮮味與辣醬完全滲透進年糕米心。"
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "加入大蔥與水煮蛋",
+                    description = "加入切段大蔥與水煮蛋，滾拌均勻吸收濃稠紅亮醬汁約 1 分鐘。",
+                    timerMinutes = 1
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "撒起司燜至融化拉絲",
+                    description = "轉微火，將莫札瑞拉起司絲均勻厚鋪在表面，蓋上鍋蓋燜 2 分鐘直到起司完全融化，撒上熟白芝麻趁熱享用超長牽絲！",
+                    timerMinutes = 2,
+                    tip = "吃的時候記得拿湯匙戳破水煮蛋，將蛋黃壓碎拌在甜辣醬汁裡最是銷魂！"
+                )
+            ),
+            chefTips = listOf(
+                "如果年糕原本是冷凍硬塊，料理前先泡冷水 15 分鐘，煮起來更加 Q 彈不裂紋。"
+            ),
+            primaryColorHex = 0xFFD50000L,
+            secondaryColorHex = 0xFFFF5252L
+        ),
+        Recipe(
+            id = "classic_carbonara",
+            title = "正宗義式培根蛋黃羅馬麵 (Carbonara)",
+            subtitle = "純粹義大利無鮮奶油傳統！黑椒、佩克里諾乳酪與蛋黃的絲滑魔術",
+            description = "羅馬四大經典義大利麵之首！嚴守無鮮奶油、無大蒜的義大利傳統老饕做法，選用風乾豬面頰肉（Guanciale）或厚切煙燻培根慢煎逼出豐沛油脂，將剛出鍋的彈牙直麵與生蛋黃、大量佩克里諾羊乳酪粉離火劇烈乳化翻拌，打造如絲綢般包覆麵條的濃郁金黃奶香醬汁。",
+            category = Category.WESTERN,
+            emoji = "🍝",
+            prepTimeMinutes = 10,
+            cookTimeMinutes = 10,
+            defaultServings = 2,
+            difficulty = Difficulty.MEDIUM,
+            calories = 580,
+            rating = 4.9,
+            reviewCount = 478,
+            tags = listOf("經典西餐", "正統羅馬", "零鮮奶油", "15分鐘快手"),
+            ingredients = listOf(
+                Ingredient("義大利直麵 (Spaghetti No.5)", 180.0, "克"),
+                Ingredient("厚切煙燻培根（或風乾豬面頰肉）", 100.0, "克", "切 0.8 公分粗條"),
+                Ingredient("新鮮可生食級生蛋黃", 3.0, "顆"),
+                Ingredient("新鮮全蛋", 1.0, "顆"),
+                Ingredient("佩克里諾羊乳酪粉 (Pecorino Romano)", 40.0, "克", "細磨粉"),
+                Ingredient("帕瑪森乳酪粉 (Parmigiano Reggiano)", 20.0, "克", "細磨粉"),
+                Ingredient("現磨粗粒黑胡椒", 1.5, "茶匙", "熱鍋先乾烙乾炒出香"),
+                Ingredient("煮麵水", 50.0, "毫升")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "煮麵條至咬勁彈牙 (Al dente)",
+                    description = "深鍋注水加 1% 鹽沸騰，放入直麵，按照包裝說明倒扣 2 分鐘煮好瀝乾，務必保留半碗濃郁煮麵水備用。",
+                    timerMinutes = 8
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "調製黃金蛋黃乳酪醬糊",
+                    description = "大碗中打入 3 顆蛋黃與 1 顆全蛋，加入佩克里諾羊乳酪粉、帕瑪森乳酪粉與大半黑胡椒碎，用叉子快速打散成濃稠金黃糊狀。",
+                    timerMinutes = 2
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "低溫煸脆培根與乾烙黑椒",
+                    description = "平底鍋不放油，放入培根條以中小火慢慢逼出油脂，煎至邊緣微焦酥脆撈出一半備用，鍋內底油倒入剩餘黑胡椒碎微炒 10 秒逼出辛香。",
+                    timerMinutes = 5,
+                    tip = "煸出的天然培根鹹香油脂是整道麵乳化的關鍵媒介。"
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "離火乳化翻拌 (Emulsification)",
+                    description = "將煮好的熱麵條投入培根油鍋拌勻吸收肉香。鍋子徹底移離火源冷卻 20 秒，倒入蛋黃乳酪糊與 3-4 大匙溫煮麵水，迅速劇烈挑拌晃鍋，讓餘溫將蛋糊乳化成滑順奶油狀醬汁！",
+                    timerMinutes = 2,
+                    tip = "必須離火翻拌！若鍋溫過高蛋液會瞬間凝結成炒蛋碎，失去滑潤如絲的口感。"
+                ),
+                CookingStep(
+                    stepNumber = 5,
+                    title = "盛盤與頂部脆培根裝飾",
+                    description = "用大叉捲起麵條盛入溫熱餐盤，淋上鍋底每一滴濃醬，頂部灑上剛預留的香脆培根塊與現磨黑胡椒。",
+                    timerMinutes = null
+                )
+            ),
+            chefTips = listOf(
+                "一定要選用新鮮高品質的生食級雞蛋；離火利用餘溫乳化是百年義式大廚不傳秘方。"
+            ),
+            primaryColorHex = 0xFFFF8F00L,
+            secondaryColorHex = 0xFFFFD54FL
+        ),
+        Recipe(
+            id = "matcha_basque_cheesecake",
+            title = "京都宇治抹茶巴斯克焦香乳酪",
+            subtitle = "焦黑微苦焦糖外殼，切開半熟軟心生乳酪雙重奏",
+            description = "甜點控心中的極致夢幻逸品！西班牙巴斯克乳酪蛋糕融合日本頂級宇治抹茶粉，高溫烘烤出表面微帶焦黑微苦焦糖層，鎖住內部如生乳酪般滑潤半熟流心質地，濃郁乳酪奶香與抹茶深邃回甘完美交織，免打發零失敗。",
+            category = Category.BAKING,
+            emoji = "🧀",
+            prepTimeMinutes = 20,
+            cookTimeMinutes = 25,
+            defaultServings = 6,
+            difficulty = Difficulty.MEDIUM,
+            calories = 360,
+            rating = 4.9,
+            reviewCount = 534,
+            tags = listOf("烘焙下午茶", "抹茶控", "免打發零失敗", "半熟流心"),
+            ingredients = listOf(
+                Ingredient("原味奶油乳酪 (Cream Cheese)", 350.0, "克", "室溫充分軟化"),
+                Ingredient("宇治五十鈴或若竹抹茶粉", 15.0, "克", "過篩"),
+                Ingredient("細砂糖", 85.0, "克"),
+                Ingredient("室溫全雞蛋", 3.0, "顆"),
+                Ingredient("動物性鮮奶油 (35%脂肪)", 180.0, "毫升"),
+                Ingredient("玉米澱粉（或低筋麵粉）", 8.0, "克", "過篩"),
+                Ingredient("新鮮檸檬汁", 1.0, "茶匙", "提亮果酸解膩"),
+                Ingredient("香草精", 0.5, "茶匙")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "軟化乳酪與攪拌順滑",
+                    description = "烤箱預熱 220°C，6 吋圓形活底模具鋪上沾濕微揉皺的烘焙紙。軟化的奶油乳酪加入細砂糖，用刮刀或手動打蛋器順時針慢速按壓順滑至無顆粒羽毛狀。",
+                    timerMinutes = 4
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "分次加入蛋液乳化",
+                    description = "將 3 顆雞蛋依序一顆一顆加入乳酪糊中，每加一顆充分攪拌均勻再加下一顆，加入檸檬汁與香草精拌勻。",
+                    timerMinutes = 3
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "抹茶粉鮮奶油均質融合",
+                    description = "將過篩的抹茶粉分次倒入常溫動物鮮奶油中，用迷你打蛋器徹底攪散至濃綠無顆粒，倒回乳酪蛋糊中輕輕切拌均勻，最後篩入玉米粉拌勻，過濾網一次使麵糊更細膩。",
+                    timerMinutes = 4,
+                    tip = "抹茶粉先與少量鮮奶油調勻過篩，可避免直接倒入乳酪糊產生乾燥小顆粒。"
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "高溫快速烘烤形成焦黑層",
+                    description = "將麵糊倒入模具，震出大氣泡，送入 220°C 烤箱中上層烘烤 22-25 分鐘，表面呈現標誌性深焦褐色、搖晃模具時中心如布丁般輕微晃動即可出爐！",
+                    timerMinutes = 24,
+                    tip = "出爐時中心輕晃代表內部保持奢華半熟流心，切勿烤過頭成全熟蛋糕。"
+                ),
+                CookingStep(
+                    stepNumber = 5,
+                    title = "冷卻與冷藏熟成切塊",
+                    description = "室溫徹底放涼後，連同模具密封放入冰箱冷藏 4 小時以上（冷藏過夜風味更濃郁最佳），切刀熱水溫燙擦乾後切塊，切面平整如生巧克力。",
+                    timerMinutes = null
+                )
+            ),
+            chefTips = listOf(
+                "所有材料（奶油乳酪、雞蛋、鮮奶油）務必保持室溫，否則混合時容易油水分離。"
+            ),
+            primaryColorHex = 0xFF2E7D32L,
+            secondaryColorHex = 0xFF66BB6AL
+        ),
+        Recipe(
+            id = "shakshuka_eggs",
+            title = "地中海番茄北非蛋 (Shakshuka)",
+            subtitle = "酸甜香濃番茄甜椒醬汁，燜出金黃溏心流心蛋",
+            description = "風靡歐美的早午餐（Brunch）超級巨星！以特級橄欖油慢火炒透洋蔥、紅黃甜椒與大蒜，融入孜然粉、紅椒粉與新鮮番茄慢熬成濃稠馥郁的酸甜醬底，在醬汁中挖三個小窩打入雞蛋，撒上菲達羊乳酪碎蓋燜至蛋白凝固蛋黃流心，撕一塊酥脆法棍沾裹食用，幸福感爆棚。",
+            category = Category.QUICK,
+            emoji = "🍳",
+            prepTimeMinutes = 8,
+            cookTimeMinutes = 12,
+            defaultServings = 2,
+            difficulty = Difficulty.EASY,
+            calories = 310,
+            rating = 4.8,
+            reviewCount = 345,
+            tags = listOf("早午餐Brunch", "鑄鐵鍋料理", "流心蛋黃", "15分鐘快手"),
+            ingredients = listOf(
+                Ingredient("新鮮雞蛋", 3.0, "顆"),
+                Ingredient("熟透牛番茄（或去皮番茄碎罐頭）", 2.0, "顆", "切小塊約 250 克"),
+                Ingredient("紅甜椒與黃甜椒", 1.0, "顆", "去籽切條絲"),
+                Ingredient("洋蔥", 0.5, "顆", "切小碎丁"),
+                Ingredient("大蒜", 3.0, "瓣", "切薄片"),
+                Ingredient("特級初榨橄欖油", 2.0, "大匙"),
+                Ingredient("孜然粉 (Cumin)", 1.0, "茶匙"),
+                Ingredient("西班牙煙燻紅椒粉 (Paprika)", 1.0, "茶匙"),
+                Ingredient("希臘菲達乳酪碎 (Feta Cheese)", 30.0, "克", "可選"),
+                Ingredient("新鮮歐芹碎（或香菜）", 1.0, "小把", "裝飾提香"),
+                Ingredient("粗粒海鹽與黑胡椒", 1.0, "適量")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "煸香洋蔥與彩椒絲",
+                    description = "平底鑄鐵鍋倒入橄欖油燒熱，下洋蔥丁與大蒜片中小火炒香約 3 分鐘，加入彩椒絲翻炒至變軟釋放清甜味。",
+                    timerMinutes = 4
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "下香料與熬煮番茄濃醬",
+                    description = "撒入孜然粉與煙燻紅椒粉煸炒 20 秒激發地中海香氣，倒入番茄丁與 50 毫升清水，加海鹽黑胡椒調味，中小火慢熬 5 分鐘至番茄化成濃稠紅醬。",
+                    timerMinutes = 5,
+                    tip = "孜然與煙燻紅椒粉是北非蛋獨特迷人香氣的核心靈魂！"
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "挖窩打入雞蛋與燜熟",
+                    description = "用湯匙在濃郁醬汁上挖出 3 個均勻凹窩，分別磕入整顆生雞蛋，周圍捏碎撒上菲達乳酪，轉微火蓋上鍋蓋燜 3-4 分鐘至蛋白泛白凝固而蛋黃保持完美流心。",
+                    timerMinutes = 4,
+                    tip = "隨時掀蓋觀察火候，蛋黃微晃即可熄火，避免蛋黃燜至全熟失去流心滋味。"
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "撒香草出鍋佐麵包",
+                    description = "熄火，表面均勻撒上新鮮歐芹碎與少許現磨黑胡椒，整鍋端上餐桌，搭配烤熱酥脆的歐式酸種麵包或法棍沾食！",
+                    timerMinutes = null
+                )
+            ),
+            chefTips = listOf(
+                "直接連同鑄鐵鍋端上桌能長效保溫，沾著熱騰騰的番茄蛋醬吃最過癮！"
+            ),
+            primaryColorHex = 0xFFD84315L,
+            secondaryColorHex = 0xFFFF7043L
+        ),
+        Recipe(
+            id = "chicken_breast_quinoa_bowl",
+            title = "義式香草舒肥雞胸彩虹藜麥碗",
+            subtitle = "水嫩多汁不柴！低GI、高蛋白與全方位微量營養",
+            description = "健身減脂期的滿分奢華便當！精選國產清雞胸肉用橄欖油、檸檬皮屑、迷迭香與蒜碎低溫舒肥浸熟，肉質水潤軟嫩如豆腐完全告別乾柴；搭配富含完全蛋白質的三色藜麥飯、烤蜜南瓜、水煮毛豆仁與櫻桃番茄，淋上蜂蜜檸檬油醋汁，清爽無負擔又有超強飽足感。",
+            category = Category.FITNESS,
+            emoji = "🥗",
+            prepTimeMinutes = 15,
+            cookTimeMinutes = 15,
+            defaultServings = 2,
+            difficulty = Difficulty.EASY,
+            calories = 380,
+            rating = 4.8,
+            reviewCount = 267,
+            tags = listOf("減脂增肌", "超嫩不柴", "低GI高纖", "健康輕食"),
+            ingredients = listOf(
+                Ingredient("新鮮去皮雞胸肉", 300.0, "克", "切厚片"),
+                Ingredient("三色熟藜麥飯", 160.0, "克", "蒸熟放涼"),
+                Ingredient("日本栗子南瓜", 120.0, "克", "切薄片烤熟"),
+                Ingredient("剝殼毛豆仁", 50.0, "克", "燙熟"),
+                Ingredient("彩色櫻桃番茄", 8.0, "顆", "對半切"),
+                Ingredient("特級初榨橄欖油", 2.0, "大匙"),
+                Ingredient("新鮮迷迭香（或義式綜合香草）", 1.0, "茶匙"),
+                Ingredient("新鮮檸檬汁", 1.5, "大匙"),
+                Ingredient("純蜂蜜", 1.0, "茶匙"),
+                Ingredient("海鹽與白胡椒粉", 1.0, "適量")
+            ),
+            steps = listOf(
+                CookingStep(
+                    stepNumber = 1,
+                    title = "鹽水醃製與香草調味",
+                    description = "雞胸肉厚處劃淺刀，浸泡 5% 鹽糖水 15 分鐘（使肌纖維鎖水），取出吸乾水份，抹上橄欖油、迷迭香碎、海鹽與黑胡椒。",
+                    timerMinutes = 15,
+                    tip = "鹽水浸泡法（Brining）是讓雞胸肉水潤爆汁、即使煎熟也不柴的物理科學秘笈！"
+                ),
+                CookingStep(
+                    stepNumber = 2,
+                    title = "嫩煎雞胸鎖住肉汁",
+                    description = "平底鍋抹少許橄欖油中火燒熱，放入雞胸片，單面煎 2 分鐘轉金黃微焦，翻面煎 1 分鐘，倒入 2 大匙溫水立刻蓋上鍋蓋，轉微火利用熱蒸氣燜 3 分鐘後熄火靜置 2 分鐘。",
+                    timerMinutes = 6,
+                    tip = "水煎燜熟法能模擬低溫舒肥效果，肉質軟嫩多汁。"
+                ),
+                CookingStep(
+                    stepNumber = 3,
+                    title = "調配檸檬蜜汁油醋",
+                    description = "小碗中混合橄欖油、檸檬汁、蜂蜜、海鹽攪打至完全乳化成金黃油醋醬。",
+                    timerMinutes = 1
+                ),
+                CookingStep(
+                    stepNumber = 4,
+                    title = "彩虹碗繽紛組裝",
+                    description = "大餐碗鋪底蒸好的三色藜麥，依序整齊碼上斜切片嫩雞胸、金黃烤南瓜片、碧綠毛豆仁與鮮紅小番茄，均勻淋上檸檬油醋汁享用！",
+                    timerMinutes = null
+                )
+            ),
+            chefTips = listOf(
+                "可一次多備兩份分裝在玻璃保鮮盒中冷藏，作為上班族 3 天內的高蛋白健康工作便當！"
+            ),
+            primaryColorHex = 0xFF388E3CL,
+            secondaryColorHex = 0xFF81C784L
         )
     )
 }
