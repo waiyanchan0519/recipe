@@ -24,6 +24,7 @@
       </div>
 
       <nav class="header-nav">
+        <a href="#download" class="nav-highlight">📥 下載 APK</a>
         <a href="#overview">總覽</a>
         <a href="#features">核心功能</a>
         <a href="#simulator">介面模擬器</a>
@@ -74,12 +75,15 @@
         </div>
 
         <div class="hero-buttons">
-          <a href="#quickstart" class="btn btn-primary">
-            <span>開始使用 / 建立專案</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="./app-release.apk" download="RecipeApp-v1.0.apk" class="btn btn-primary btn-download-hero">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>下載 Release APK (v1.0)</span>
           </a>
           <a href="#simulator" class="btn btn-secondary">
             <span>體驗介面模擬器</span>
+          </a>
+          <a href="#quickstart" class="btn btn-secondary">
+            <span>原始碼編譯</span>
           </a>
         </div>
       </div>
@@ -127,7 +131,8 @@
       <div class="sidebar-sticky">
         <div class="sidebar-header">目錄導航</div>
         <ul class="sidebar-links">
-          <li><a href="#overview" class="active">1. 專案總覽 (Overview)</a></li>
+          <li><a href="#download" class="active">📥 應用程式下載 (Download)</a></li>
+          <li><a href="#overview">1. 專案總覽 (Overview)</a></li>
           <li><a href="#features">2. 核心特色 (Key Features)</a></li>
           <li><a href="#simulator">3. 介面互動模擬器 (Live UI)</a></li>
           <li><a href="#architecture">4. 應用程式架構 (Architecture)</a></li>
@@ -148,6 +153,59 @@
 
     <!-- Docs Main Body -->
     <article class="docs-body">
+      <!-- Section: Download Release APK -->
+      <section id="download" class="doc-section">
+        <h2 class="section-title">📥 應用程式下載 (Download Release APK)</h2>
+        <p>
+          最新正式簽署發行版 <strong>v1.0.0</strong> 現已就緒！完全相容於 Android 7.0 (API 24) 及以上裝置，點擊下方即可直接下載並安裝至您的手機。
+        </p>
+
+        <div class="download-banner-card">
+          <div class="download-main-info">
+            <div class="download-app-icon">🍳</div>
+            <div class="download-text-wrap">
+              <div class="download-version-tag">最新正式版 • Release v1.0.0</div>
+              <h3 class="download-app-title">美味食譜 RecipeApp</h3>
+              <div class="download-meta-tags">
+                <span class="meta-tag">📦 檔案大小: <strong>9.65 MB</strong></span>
+                <span class="meta-tag">📱 系統需求: <strong>Android 7.0+</strong></span>
+                <span class="meta-tag">🔐 簽署狀態: <strong>Official Signed APK</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="download-action-group">
+            <a href="./app-release.apk" download="RecipeApp-v1.0.apk" class="btn btn-primary btn-download-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <div class="btn-text-col">
+                <span class="btn-primary-text">直接下載 Release APK</span>
+                <span class="btn-sub-text">版本 1.0 • app-release.apk (9.65 MB)</span>
+              </div>
+            </a>
+
+            <div class="download-alt-links">
+              <a href="https://github.com/waiyanchan0519/recipe/releases" target="_blank" rel="noopener noreferrer" class="alt-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                <span>前往 GitHub Releases 發布頁面</span>
+              </a>
+              <a href="https://github.com/waiyanchan0519/recipe/raw/main/docs/app-release.apk" class="alt-link">
+                <span>🌐 GitHub Raw 備用載點</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="install-guide-mini">
+            <h4>💡 Android 手機安裝指南：</h4>
+            <ol>
+              <li>點擊上方 <strong>「直接下載 Release APK」</strong> 將安裝檔儲存至手機。</li>
+              <li>在手機頂端通知列或「檔案/下載」資料夾中點擊 <code>RecipeApp-v1.0.apk</code>。</li>
+              <li>若系統提示「為了您的安全，手機目前不允許安裝來源不明的應用程式」，請點擊 <strong>設定</strong> ➔ 開啟 <strong>允許來自此來源的應用程式</strong>。</li>
+              <li>返回並點擊 <strong>安裝</strong>，安裝完成即可開啟享用！</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       <!-- Section 1: Overview -->
       <section id="overview" class="doc-section">
         <h2 class="section-title">1. 專案總覽 (Overview)</h2>
