@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "com.hkaiSolveAcademy.vibeCoding.YanChan"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.hkaiSolveAcademy.vibeCoding.YanChan"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = 36
+        versionCode = 2
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
