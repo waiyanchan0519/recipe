@@ -3,14 +3,135 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Chef Hat / Cloche Icon in Vector -->
+
+    <!-- Group: Pan Handle -->
     <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M54,28c-4.4,0 -8,3.6 -8,8c0,1.1 0.2,2.1 0.6,3c-3.7,1.2 -6.6,4.6 -6.6,8.7c0,3.6 2.1,6.7 5.2,8.2c-0.1,0.7 -0.2,1.4 -0.2,2.1c0,6.6 5.4,12 12,12s12,-5.4 12,-12c0,-0.7 -0.1,-1.4 -0.2,-2.1c3.1,-1.5 5.2,-4.6 5.2,-8.2c0,-4.1 -2.9,-7.5 -6.6,-8.7c0.4,-0.9 0.6,-1.9 0.6,-3c0,-4.4 -3.6,-8 -8,-8z" />
+        android:fillColor="#8D6E63"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="2.2"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M72,66 L86,77 C89,80 91,83 89,86 C87,89 84,88 81,85 L69,73 Z" />
+    <!-- Handle Hanging Hole -->
     <path
-        android:fillColor="#FFE65100"
-        android:pathData="M40,68h28v6h-28z" />
+        android:fillColor="#FFF4E6"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.5"
+        android:pathData="M84,83m-2,0a2,2 0 1,0 4,0a2,2 0 1,0 -4,0" />
+
+    <!-- Group: Pan Body Outer Shadow / Base -->
     <path
-        android:fillColor="#FFFFB300"
-        android:pathData="M38,76h32v4h-32z" />
+        android:fillColor="#3E2723"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="2.5"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M27,61 C27,77 39,83 53,83 C67,83 77,77 77,61 C77,55 27,55 27,61 Z" />
+    <!-- Pan Body Inner Cavity -->
+    <path
+        android:fillColor="#4E342E"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.8"
+        android:strokeLineJoin="round"
+        android:pathData="M30,59 C30,73 40,78 53,78 C65,78 74,73 74,59 C74,54 30,54 30,59 Z" />
+
+    <!-- Group: Anime Sunny-Side-Up Egg White (白雲般有機造型蛋白) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="2.2"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M35,60 C33,54 38,48 44,50 C48,46 56,46 60,50 C66,47 71,52 70,58 C73,64 68,71 61,71 C55,74 46,73 42,70 C36,70 33,65 35,60 Z" />
+
+    <!-- Group: Egg Yolk (金黃蛋黃) -->
+    <path
+        android:fillColor="#FFA000"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="2.0"
+        android:pathData="M52,60m-10,0a10,10 0 1,0 20,0a10,10 0 1,0 -20,0" />
+
+    <!-- Anime Face: Happy Eye Left (彎彎瞇眼 ^) -->
+    <path
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M46,59 Q48,56 50,59" />
+
+    <!-- Anime Face: Happy Eye Right (彎彎瞇眼 ^) -->
+    <path
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M54,59 Q56,56 58,59" />
+
+    <!-- Anime Face: Cute Blush Left (腮紅) -->
+    <path
+        android:fillColor="#FF8A80"
+        android:pathData="M44,61.5 C44,60.8 45.2,60.3 46.5,60.3 C47.8,60.3 49,60.8 49,61.5 C49,62.2 47.8,62.7 46.5,62.7 C45.2,62.7 44,62.2 44,61.5 Z" />
+
+    <!-- Anime Face: Cute Blush Right (腮紅) -->
+    <path
+        android:fillColor="#FF8A80"
+        android:pathData="M55,61.5 C55,60.8 56.2,60.3 57.5,60.3 C58.8,60.3 60,60.8 60,61.5 C60,62.2 58.8,62.7 57.5,62.7 C56.2,62.7 55,62.2 55,61.5 Z" />
+
+    <!-- Anime Face: Smiling Mouth (微笑小嘴) -->
+    <path
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:pathData="M50.5,62 Q52,64.2 53.5,62" />
+
+    <!-- Yolk Anime Gloss / Highlight (高光水汪感) -->
+    <path
+        android:fillColor="#FFFDE7"
+        android:pathData="M48,54 C48.8,53.2 50.2,53.2 51,54 C51.8,54.8 51.5,56.2 50.5,56.6 C49.5,57 48.5,56 48,55.2 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,56.5m-1,0a1,1 0 1,0 2,0a1,1 0 1,0 -2,0" />
+
+    <!-- Cute Anime Chef Hat (微傾斜可愛廚師帽) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.8"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M37,45 C33,43 33,37 37,35 C37,31 43,30 46,33 C49,30 55,32 54,37 C56,40 52,45 46,45 Z" />
+    <path
+        android:fillColor="#E65100"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.5"
+        android:pathData="M38,45 L47,43 L48,46 L39,48 Z" />
+
+    <!-- Anime Steam Curls (冒氣熱騰騰線條) -->
+    <path
+        android:strokeColor="#E65100"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M48,29 Q45,24 48,19 Q51,15 47,12" />
+    <path
+        android:strokeColor="#FF8A65"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:pathData="M56,27 Q59,22 57,17 Q54,14 57,11" />
+
+    <!-- Anime Sparkle Star 1 Right (動漫十字閃爍星星 ✦) -->
+    <path
+        android:fillColor="#FFB300"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.2"
+        android:pathData="M73,26 Q73,31 78,31 Q73,31 73,36 Q73,31 68,31 Q73,31 73,26 Z" />
+
+    <!-- Anime Sparkle Star 2 Left (動漫小星星 ✦) -->
+    <path
+        android:fillColor="#FFD54F"
+        android:strokeColor="#2B201B"
+        android:strokeWidth="1.0"
+        android:pathData="M31,34 Q31,37 34,37 Q31,37 31,40 Q31,37 28,37 Q31,37 31,34 Z" />
+
+    <!-- Anime Sparkle Dot (小光點) -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M78,41m-1.2,0a1.2,1.2 0 1,0 2.4,0a1.2,1.2 0 1,0 -2.4,0" />
 </vector>
