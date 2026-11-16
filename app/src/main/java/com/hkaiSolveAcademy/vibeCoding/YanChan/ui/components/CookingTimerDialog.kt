@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.components
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -44,7 +44,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
-import com.example.recipeapp.viewmodel.TimerUiState
+import com.hkaiSolveAcademy.vibeCoding.YanChan.viewmodel.TimerUiState
 
 @Composable
 fun CookingTimerDialog(

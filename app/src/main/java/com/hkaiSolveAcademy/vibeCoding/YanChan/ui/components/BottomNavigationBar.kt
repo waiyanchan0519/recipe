@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.components
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
@@ -18,7 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.recipeapp.viewmodel.AppNavTab
+import com.hkaiSolveAcademy.vibeCoding.YanChan.viewmodel.AppNavTab
 
 @Composable
 fun BottomNavigationBar(

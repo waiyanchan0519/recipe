@@ -1,4 +1,4 @@
-package com.example.recipeapp.model
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.model
 
 enum class Difficulty(val label: String, val stars: String) {
     EASY("新手入門", "★☆☆"),

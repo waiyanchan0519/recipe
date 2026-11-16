@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.screens
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -41,7 +41,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import com.example.recipeapp.model.ShoppingItem
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.ShoppingItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

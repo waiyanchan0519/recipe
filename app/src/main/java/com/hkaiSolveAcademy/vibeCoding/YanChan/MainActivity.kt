@@ -1,4 +1,4 @@
-package com.example.recipeapp
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan
 
 import android.os.Bundle
 import android.widget.Toast
@@ -16,15 +16,15 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.recipeapp.ui.components.BottomNavigationBar
-import com.example.recipeapp.ui.components.CookingTimerDialog
-import com.example.recipeapp.ui.screens.FavoritesScreen
-import com.example.recipeapp.ui.screens.HomeScreen
-import com.example.recipeapp.ui.screens.RecipeDetailScreen
-import com.example.recipeapp.ui.screens.ShoppingListScreen
-import com.example.recipeapp.ui.theme.RecipeAppTheme
-import com.example.recipeapp.viewmodel.AppNavTab
-import com.example.recipeapp.viewmodel.RecipeViewModel
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components.BottomNavigationBar
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components.CookingTimerDialog
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens.FavoritesScreen
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens.HomeScreen
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens.RecipeDetailScreen
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens.ShoppingListScreen
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.theme.RecipeAppTheme
+import com.hkaiSolveAcademy.vibeCoding.YanChan.viewmodel.AppNavTab
+import com.hkaiSolveAcademy.vibeCoding.YanChan.viewmodel.RecipeViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.components
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding

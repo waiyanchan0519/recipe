@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.components
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -13,7 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.recipeapp.model.Category
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Category
 
 @Composable
 fun CategoryChipBar(

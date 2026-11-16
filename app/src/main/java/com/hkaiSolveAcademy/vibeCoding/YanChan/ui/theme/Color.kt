@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.theme
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

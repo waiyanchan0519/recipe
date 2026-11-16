@@ -1,10 +1,10 @@
-package com.example.recipeapp.data
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.data
 
-import com.example.recipeapp.model.Category
-import com.example.recipeapp.model.CookingStep
-import com.example.recipeapp.model.Difficulty
-import com.example.recipeapp.model.Ingredient
-import com.example.recipeapp.model.Recipe
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Category
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.CookingStep
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Difficulty
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Ingredient
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Recipe
 
 object SampleData {
     val recipes: List<Recipe> = listOf(

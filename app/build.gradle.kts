@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.recipeapp"
+    namespace = "com.hkaiSolveAcademy.vibeCoding.YanChan"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.recipeapp"
+        applicationId = "com.hkaiSolveAcademy.vibeCoding.YanChan"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

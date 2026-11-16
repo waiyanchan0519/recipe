@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.screens
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -44,11 +44,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.recipeapp.model.Category
-import com.example.recipeapp.model.Recipe
-import com.example.recipeapp.ui.components.CategoryChipBar
-import com.example.recipeapp.ui.components.RecipeCard
-import com.example.recipeapp.ui.components.TopSearchBar
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Category
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Recipe
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components.CategoryChipBar
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components.RecipeCard
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components.TopSearchBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

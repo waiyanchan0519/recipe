@@ -1,11 +1,11 @@
-package com.example.recipeapp.viewmodel
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.recipeapp.data.SampleData
-import com.example.recipeapp.model.Category
-import com.example.recipeapp.model.Recipe
-import com.example.recipeapp.model.ShoppingItem
+import com.hkaiSolveAcademy.vibeCoding.YanChan.data.SampleData
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Category
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Recipe
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.ShoppingItem
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

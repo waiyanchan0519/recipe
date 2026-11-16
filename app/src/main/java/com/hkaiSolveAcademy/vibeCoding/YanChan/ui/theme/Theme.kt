@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.theme
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.theme
 
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme

@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.components
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -38,7 +38,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.recipeapp.model.Recipe
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Recipe
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.screens
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -64,9 +64,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.recipeapp.model.CookingStep
-import com.example.recipeapp.model.Ingredient
-import com.example.recipeapp.model.Recipe
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.CookingStep
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Ingredient
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Recipe
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.example.recipeapp.ui.screens
+﻿package com.hkaiSolveAcademy.vibeCoding.YanChan.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -28,8 +28,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.recipeapp.model.Recipe
-import com.example.recipeapp.ui.components.RecipeCard
+import com.hkaiSolveAcademy.vibeCoding.YanChan.model.Recipe
+import com.hkaiSolveAcademy.vibeCoding.YanChan.ui.components.RecipeCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
