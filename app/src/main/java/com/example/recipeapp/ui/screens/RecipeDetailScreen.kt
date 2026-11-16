@@ -406,7 +406,7 @@ fun RecipeDetailScreen(
             }
 
             // Steps
-            itemsIndexed(recipe.steps) { index, step ->
+            items(recipe.steps) { step ->
                 val isCompleted = completedSteps.contains(step.stepNumber)
                 StepItemCard(
                     step = step,
